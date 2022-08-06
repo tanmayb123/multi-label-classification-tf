@@ -38,7 +38,7 @@ if __name__ == "__main__":
     features = np.load("features.npy")
     
     x_train, y_train = label(features[:, :40])
-    x_test, y_test = label(features[:, 40:])
+    x_test, y_test = label(features[:, 20:])
 
     model = build_model()
     model.fit(x_train, y_train, validation_data=(x_test, y_test), verbose=1, epochs=40)
